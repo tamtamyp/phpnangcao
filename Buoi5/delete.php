@@ -9,5 +9,5 @@ if (isset($_REQUEST['code'])) {
     $conn->query($sql);
     $conn->close();
 }
-header('Location: index.php');
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 exit;

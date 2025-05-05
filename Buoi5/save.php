@@ -9,5 +9,5 @@ $sql = "INSERT INTO employee (code, fullname, birthdate, gender ) VALUES ('" . $
 var_dump($sql);
 $conn->query($sql);
 $conn->close();
-header('Location: index.php');
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 exit;

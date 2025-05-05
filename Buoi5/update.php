@@ -8,5 +8,5 @@ $gender = $_POST['gender'];
 $sql = "UPDATE employee SET code= '" . $code . "', fullname='" . $fullname . "',birthdate='" . $birthdate . "',gender='" . $gender . "'"." where code='". $code."'";
 $conn->query($sql);
 $conn->close();
-header('Location: index.php');
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 exit;
