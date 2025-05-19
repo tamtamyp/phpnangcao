@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/phpnangcao/Buoi7/sict/?$ 
+RewriteRule ^.*$ https://www.haui.edu.vn/vn/html/sict
