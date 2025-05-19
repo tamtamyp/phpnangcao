@@ -3,7 +3,7 @@
         function getAll() {
             //print("Đây là thông tin sinh viên");
             $model = $this->model("Student");
-            $this->view("StudentInfo", $model->getAll());
+            $this->view("Student/StudentInfo", $model->getAll());
         }
         function add() {
             print("Đây là phương thức Thêm");
