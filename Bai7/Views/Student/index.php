@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-        <div id="addUser"><a class="btn btn-primary" href="add.php" role="button">Thêm mới</a></div>
+        <div id="addUser"><a class="btn btn-primary" href="/Bai7/Student/add" role="button">Thêm mới</a></div>
 
         <table class="table table-striped">
             <thead>
@@ -41,7 +41,12 @@
                             <td><?php echo $m["BirthDate"]; ?></td>
                             <td><?php echo $m["Gender"]; ?></td>
                             <td><a class="btn btn-danger" href="edit.php?Code=<?php echo $m["Code"]; ?>&name=<?php echo $m["FullName"]; ?>&BirthDate=<?php echo $m["BirthDate"]; ?>&Gender=<?php echo $m["Gender"]; ?>" role="button">Sửa</a></td>
-                            <td><a class="btn btn-primary" href="delete.php?Code=<?php echo $m["Code"]; ?>" role="button">Xóa</a></td>
+                            <td>
+                                <!-- <a class="btn btn-primary" href="delete.php?Code=<?php echo $m["Code"]; ?>" role="button">Xóa</a> -->
+                                <a class="btn btn-primary" href="/Bai7/Student/delete/<?php echo $m['Code']; ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">Xóa</a>
+
+
+                            </td>
 
                         </tr>
                 <?php
